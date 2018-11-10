@@ -1,7 +1,11 @@
 "use strict";
 
 const post = {
-    template: ``,
+    template: `
+    <p>{{ $ctrl.post.subject }}<p>
+    <p>{{ $ctrl.post.body }}<p>
+    `,
+    bindings: {post: "<"},
     controller: [function() {
 
     }]

@@ -2,15 +2,26 @@
 
 const socialPosts = {
     template: `
-    <button>New Post</button>
+    <button id="new-btn" class="border">New Post</button>
     <post-form></post-form>
-    <post ng-repeat="item in $ctrl.post"></post>
+    <section class="post-container border">
+    <post post="$ctrl.post" ng-repeat="item in $ctrl.post""></post> 
+    </section>
     `,
-    controller: [function() {
-
+    controller: [function () {
+        const vm = this;
+        vm.post = [
+            {
+                subject: "Cat",
+                body: "Cats are really stupid."
+            },
+            {
+                subject: "Dog",
+                body: "Dogs are really awesome."
+            }];
     }]
 }
 
 angular
-.module("App")
-.component("socialPosts", socialPosts);
+    .module("App")
+    .component("socialPosts", socialPosts);
