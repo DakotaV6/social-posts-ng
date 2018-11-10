@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="App">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Social Posts</title>
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Homemade+Apple" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <p id="title">My Posts</p>
+  <social-posts></social-posts>
 
 
   <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
   <script src="app/module/module.js"></script>
-  <script src="social-posts.js"></script>
-  <script src="post-form.js"></script>
-  <script src="post.js"></script>
+  <script src="app/components/social-posts/social-posts.js"></script>
+  <script src="app/components/post-form/post-form.js"></script>
+  <script src="app/components/post/post.js"></script>
 </body>
 </html>
