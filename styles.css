@@ -70,3 +70,7 @@ textarea {
 .post {
     border-bottom: 1px solid #f3f1f7;
 }
+.post-subject {
+    font-weight: 600;
+    font-size: 20px;
+}

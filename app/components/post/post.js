@@ -3,7 +3,7 @@
 const post = {
     template: `
     <section class="post">
-    <p>{{ $ctrl.item.subject }}<p>
+    <p class="post-subject">{{ $ctrl.item.subject }}<p>
     <p>{{ $ctrl.item.body }}<p>
     </section>
     `,

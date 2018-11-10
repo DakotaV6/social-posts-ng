@@ -2,8 +2,8 @@
 
 const socialPosts = {
     template: `
-    <button id="new-btn" class="border">New Post</button>
-    <post-form on-submit="$ctrl.onSubmit(newPost);"></post-form>
+    <button id="new-btn" class="border" ng-click="showForm = true; hideAddBtn = true" ng-hide="hideAddBtn">New Post</button>
+    <post-form on-submit="$ctrl.onSubmit(newPost);" ng-show="showForm" ng-submit="showForm = false; hideAddBtn = false"></post-form>
     <section class="post-container border">
     <post post="$ctrl.post" ng-repeat="item in $ctrl.post" item="item"></post> 
     </section>
