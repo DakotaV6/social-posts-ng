@@ -3,9 +3,9 @@
 const socialPosts = {
     template: `
     <button id="new-btn" class="border">New Post</button>
-    <post-form></post-form>
+    <post-form on-submit="$ctrl.onSubmit(newPost);"></post-form>
     <section class="post-container border">
-    <post post="$ctrl.post" ng-repeat="item in $ctrl.post""></post> 
+    <post post="$ctrl.post" ng-repeat="item in $ctrl.post" item="item"></post> 
     </section>
     `,
     controller: [function () {
@@ -19,6 +19,9 @@ const socialPosts = {
                 subject: "Dog",
                 body: "Dogs are really awesome."
             }];
+        vm.onSubmit = (newPost) => {
+            vm.post.unshift(angular.copy(newPost));
+        }
     }]
 }
 

@@ -2,13 +2,12 @@
 
 const post = {
     template: `
-    <p>{{ $ctrl.post.subject }}<p>
-    <p>{{ $ctrl.post.body }}<p>
+    <section class="post">
+    <p>{{ $ctrl.item.subject }}<p>
+    <p>{{ $ctrl.item.body }}<p>
+    </section>
     `,
-    bindings: {post: "<"},
-    controller: [function() {
-
-    }]
+    bindings: {post: "<", item: "<"}
 }
 
 angular

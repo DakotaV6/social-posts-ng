@@ -64,4 +64,9 @@ textarea {
     transform: translateX(-50%);
     background-color: white;
     width: 60%;
+    margin-top: 20px;
+    padding: 30px 60px;
+}
+.post {
+    border-bottom: 1px solid #f3f1f7;
 }
