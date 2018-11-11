@@ -4,10 +4,8 @@ function expandOnFocus() {
     return {
         restrict: "A",
         link: function ($scope, $element, $attrs) {
-            console.log($element);
             $element.on("focus", () => {
                 if ($element[0].tagName === "INPUT") {
-                    console.log("FOCUSED");
                     $element.css("height", "70px");
                 }
                 if ($element[0].tagName === "TEXTAREA") {
